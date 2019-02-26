@@ -1,0 +1,89 @@
+.user-list {
+    width: 90%;
+    margin: 20px auto 0;
+    padding: 0 20px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #FFF;
+    margin: 20px 0;
+}
+
+th {
+    height: 50px;
+    background: #6E7BDB;
+    text-align: left;
+    padding: 0 30px;
+}
+
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #FFF;
+}
+
+tr:hover{
+    background: #6E7BDB;
+    transition: all 0.5s;
+    color: #FFF;
+}
+
+tr:hover a {
+    background: #FFF;
+    color: #6E7BDB;
+    transition: all 0.4s;
+}
+
+td {
+    padding: 0 30px;
+    font-size: 16px;
+    color: #000;
+    margin-top: 5px;
+    line-height: 18px;
+}
+
+table a {
+    height: 30px;
+    width: 100%;
+    border-radius: 4px;
+    background: #6E7BDB;
+    margin: 10px 10px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+#registrar {
+    height: 40px;
+    width: 100%;
+    background: rgb(42, 189, 46);
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+    box-shadow: 2px 2px 5px rgb(110, 110, 110)
+}
+
+#registrar:hover {
+    background: rgb(113, 189, 116);
+}
+
+
