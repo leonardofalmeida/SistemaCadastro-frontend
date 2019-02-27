@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import api from '../../services/api';
 import Moment from 'react-moment';
 import { Link } from 'react-router-dom';
-import Maps from '../map'
 
 import './styles.css';
 
