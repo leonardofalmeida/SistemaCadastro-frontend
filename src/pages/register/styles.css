@@ -57,7 +57,7 @@ button:hover {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .user-register {
-        width: 100%;
+        width: 90%;
         margin: 20px auto 0;
         padding: 0 20px;
     }
@@ -66,9 +66,37 @@ button:hover {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .user-register {
-        width: 80%;
+        width: 70%;
         margin: 20px auto 0;
         padding: 0 20px;
     }
 } 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .user-register {
+        width: 50%;
+        margin: 20px auto 0;
+        padding: 0 20px;
+    }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .user-register {
+        width: 40%;
+        margin: 20px auto 0;
+        padding: 0 20px;
+    }
+} 
+
+@media only screen and (min-width: 1200px) {
+    .user-register {
+        width: 30%;
+        margin: 20px auto 0;
+        padding: 0 20px;
+    }
+}
+
+
 

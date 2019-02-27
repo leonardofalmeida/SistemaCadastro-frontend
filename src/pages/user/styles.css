@@ -47,8 +47,30 @@ p:hover {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .user-info {
-        width: 80%;
+        width: 70%;
         margin: 20px auto 0;
-        height: 100vh;
     }
 } 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .user-info {
+        width: 50%;
+        margin: 20px auto 0;
+    }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .user-info {
+        width: 40%;
+        margin: 20px auto 0;
+    }
+} 
+
+@media only screen and (min-width: 1200px) {
+    .user-info {
+        width: 30%;
+        margin: 20px auto 0;
+    }
+}
