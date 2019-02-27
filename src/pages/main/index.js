@@ -16,7 +16,6 @@ export default class Main extends Component {
 
     loadUsers = async () => {
         const response = await api.get('/users');
-        console.log(response.data);
         this.setState({ users: response.data });
     }
 

@@ -23,7 +23,6 @@ export default class Register extends Component {
 
     loadUfs = async () => {
         const response = await axios.get('https://servicodados.ibge.gov.br/api/v1/localidades/estados');
-        console.log(response.data);
         this.setState({ ufs: response.data })
     }
 
@@ -55,7 +54,7 @@ export default class Register extends Component {
         this.setLoading();
         try {
             await waitFor(1000);
-            const response = await api.post(`/users`, { 
+            await api.post(`/users`, { 
                 id: '',
                 nome: this.state.nome,
                 cpf: this.state.cpf,
@@ -63,7 +62,6 @@ export default class Register extends Component {
                 peso: this.state.peso,
                 uf: this.state.uf
              });
-            console.log(response.status);
             this.props.history.push('/');
             alert('Usuario cadastrado com sucesso!')
         } catch(err) {

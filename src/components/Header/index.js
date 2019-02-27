@@ -14,12 +14,6 @@ const Header = () => (
             <li>
                 <a href="/maps">Mapa</a>
             </li>
-            <li>
-                <a href="#contact">Documentação</a>
-            </li>
-            <li>
-                <a href="#about">Sobre</a>
-            </li>
         </ul>
     </div>
 );
