@@ -36,18 +36,25 @@ export default class Register extends Component {
         });
     }
 
+    setLoading(loading = true) { 
+        if(loading === true) {
+            this.formEl = document.getElementById('forms')
+            let loadEl = document.createElement('span');
+            loadEl.appendChild(document.createTextNode('Processando...'));
+            loadEl.setAttribute('id', 'loading');
+            this.formEl.appendChild(loadEl);
+        } else {
+            document.getElementById('loading').remove();
+        }
+    }
+
     handleSubmit = async event => {
         event.preventDefault();
-        
-        this.formEl = document.getElementById('forms')
-        let loadEl = document.createElement('span');
-        loadEl.appendChild(document.createTextNode('Processando...'));
-        this.formEl.appendChild(loadEl);
 
         const waitFor = delay => new Promise(resolve => setTimeout(resolve, delay));
-
+        this.setLoading();
         try {
-            await waitFor(3000);
+            await waitFor(1000);
             const response = await api.post(`/users`, { 
                 id: '',
                 nome: this.state.nome,
@@ -58,8 +65,10 @@ export default class Register extends Component {
              });
             console.log(response.status);
             this.props.history.push('/');
+            alert('Usuario cadastrado com sucesso!')
         } catch(err) {
-            console.warn(err);
+            this.setLoading(false);
+            alert('Erro ao cadastrar usuario.');
         }
     }
         
@@ -71,7 +80,7 @@ export default class Register extends Component {
           <div className="user-register">
             <form id="forms" onSubmit={this.handleSubmit}>
                 <label>Nome completo:</label><br />
-                <input placeholder="José Alves" type="text"  name="nome" onChange={this.handleChange} title="O nome não pode conter números" required pattern="^[A-Za-zÀ-ÿ ,.'-]+$"/>
+                <input type="text"  name="nome" onChange={this.handleChange} title="O nome não pode conter números" required pattern="^[A-Za-zÀ-ÿ ,.'-]+$"/>
                 <br />
                 <label>CPF:</label><br />
                 <input type="text"  name="cpf" onChange={this.handleChange} maxLength="11" title="Apenas números, sem pontos '.' ou traços '-'" required pattern="[0-9]{11}"/>
