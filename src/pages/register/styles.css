@@ -54,3 +54,21 @@ button:hover {
     background-color: rgb(6, 121, 10);
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .user-register {
+        width: 100%;
+        margin: 20px auto 0;
+        padding: 0 20px;
+    }
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .user-register {
+        width: 80%;
+        margin: 20px auto 0;
+        padding: 0 20px;
+    }
+} 
+
