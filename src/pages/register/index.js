@@ -40,7 +40,7 @@ export default class Register extends Component {
             this.formEl = document.getElementById('forms')
             let loadEl = document.createElement('span');
             loadEl.appendChild(document.createTextNode('Processando...'));
-            loadEl.setAttribute('id', 'loading');
+            loadEl.setAttribute('id', 'loadingForms');
             this.formEl.appendChild(loadEl);
         } else {
             document.getElementById('loading').remove();
