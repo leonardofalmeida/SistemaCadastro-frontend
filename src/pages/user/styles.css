@@ -35,12 +35,16 @@ p:hover {
     font-size: 18px;
 }
 
+span {
+    font-weight: bold;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .user-info {
         width: 90%;
         margin: 20px auto 0;
-        height: 100vh;
+        height: 70vh;
     }
 } 
 

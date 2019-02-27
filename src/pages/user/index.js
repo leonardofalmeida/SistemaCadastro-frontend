@@ -21,14 +21,19 @@ export default class User extends Component {
         return (
             <div className="user-info">
                 <h3>Informações</h3>
-                <p>Nome:{user.nome}</p>
-                <p>CPF:{user.cpf}</p>
-                <p>Data de nascimento:  
+                <p><span>Nome:</span> <br/>
+                {user.nome}</p>
+                <p><span>CPF:</span> <br/>
+                {user.cpf}</p>
+                <p><span>Data de nascimento:</span> <br/>  
                     <Moment format="DD/MM/YYYY">{user.nascimento}</Moment>
                 </p>
-                <p>Peso:{user.peso}</p>
-                <p>UF:{user.uf}</p>
-                <p>ID:{user.id}</p>
+                <p><span>Peso:</span> <br/>
+                {user.peso} kg</p>
+                <p><span>UF:</span> <br/>
+                {user.uf}</p>
+                <p><span>ID:</span> <br/>
+                {user.id}</p>
             </div>
         )
     }

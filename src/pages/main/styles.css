@@ -9,6 +9,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     color: #FFF;
+    margin-bottom: 20px;
 }
 
 th {

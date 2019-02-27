@@ -5,13 +5,16 @@
     box-sizing: border-box;
 }
 
-body {
+body, html {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #fafafa;
-    color: #333;
+    height: 100%;
+}
+
+.App {
+    min-width: 100%;
+    min-height: 100vh;
     background-image: url("./img/city.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #18232b;
+    background-position: center;
 }
-

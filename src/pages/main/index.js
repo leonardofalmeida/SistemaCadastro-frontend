@@ -51,7 +51,7 @@ export default class Main extends Component {
                             <th>Nome</th>
                             <th>CPF</th> 
                             <th>Data de nascimento</th>
-                            <th>Peso</th>
+                            <th>Peso (kg)</th>
                             <th>UF</th>
                             <th>Ação</th>
                         </tr>
