@@ -53,7 +53,7 @@ export default class Register extends Component {
         const waitFor = delay => new Promise(resolve => setTimeout(resolve, delay));
         this.setLoading();
         try {
-            await waitFor(1000);
+            await waitFor(500);
             await api.post(`/users`, { 
                 id: '',
                 nome: this.state.nome,

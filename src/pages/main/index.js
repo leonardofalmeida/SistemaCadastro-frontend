@@ -14,9 +14,27 @@ export default class Main extends Component {
         this.loadUsers();
     }
 
+    setLoading(loading = true) { 
+        if(loading === true) {
+            this.formEl = document.getElementById('user-form')
+            let loadEl = document.createElement('h1');
+            loadEl.setAttribute('id', 'loading');
+            this.formEl.appendChild(loadEl);
+        } else {
+            document.getElementById('loading').remove();
+        }
+    }
+
     loadUsers = async () => {
-        const response = await api.get('/users');
-        this.setState({ users: response.data });
+        this.setLoading();
+        try {
+            const response = await api.get('/users');
+            this.setState({ users: response.data });
+            this.setLoading(false);
+        } catch (err) {
+            alert('Algo deu errado, recarregue a página.')
+            this.setLoading(false);
+        }
     }
 
     render() {
@@ -24,7 +42,7 @@ export default class Main extends Component {
         return (
             <div className='user-list'>
                 <Link id="registrar" to="/register">Registrar novo usuario</Link>
-                <table>
+                <table id="user-form">
                     <tr className="caption">
                         <th>ID</th>
                         <th>Nome</th>
